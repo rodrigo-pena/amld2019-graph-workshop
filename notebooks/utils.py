@@ -2,7 +2,11 @@
 
 
 import pandas as pd
+import networkx as nx
+import matplotlib.pyplot as plt
 
+
+# For the CH council data
 
 def assign_party_to_names(party_membership_list_path, namelist):
     """ Adds a column containing the party membership of the councillors specified in namelist
@@ -41,3 +45,41 @@ def assign_party_to_names(party_membership_list_path, namelist):
         print("{0} councillors couldn't be associated to a party".format(n_no_party))
     return namelist_with_parties
 
+
+# For the airport data
+
+def preprocess_flight_routes():
+    routes = pd.read_csv('../data/routes_clean.csv', low_memory=False)
+    airports = pd.read_csv('../data/airports_clean.csv', index_col=0)
+
+    G = nx.from_pandas_edgelist(routes, 'Source airport', 'Destination airport', ['Distance'])
+
+    pos = {airport: (v['Longitude'], v['Latitude'])
+        for airport, v in
+        airports.to_dict('index').items()}
+
+    return routes, airports, pos, G
+
+def display_map(graph, pos, node_color=None):
+
+    import cartopy.crs as ccrs
+
+    deg = nx.degree(graph)
+    node_sizes = [5 * deg[iata] for iata in graph.nodes]
+
+    node_labels = {iata: iata if deg[iata] >= 200 else ''
+                   for iata in graph.nodes}
+
+    # Map projection
+    fig, ax = plt.subplots(1, 1, figsize=(36, 24),
+                           subplot_kw=dict(projection=ccrs.PlateCarree()))
+    ax.coastlines()
+
+    nx.draw_networkx(graph, ax=ax,
+                     font_size=20,
+                     alpha=.5,
+                     width=.075,
+                     node_size=node_sizes,
+                     labels=node_labels,
+                     pos=pos,
+                     node_color=node_color)
