@@ -50,6 +50,8 @@ Run the `test_install.ipynb` Jupyter notebook to make sure that the main package
 * `conda install -c conda-forge osmnx`
 * `conda install -c conda-forge cartopy`
 
+in the terminal, from within the `amld2019_graph_workshop` environment.
+
 [git]: https://git-scm.com
 [python]: https://www.python.org
 [jupyter]: https://jupyter.org/
