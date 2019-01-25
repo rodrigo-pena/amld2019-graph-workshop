@@ -18,6 +18,7 @@ networkx==2.2
 numpy==1.16.0
 osmnx==0.8.2
 pandas==0.23.4
+git+https://github.com/epfl-lts2/pygsp.git@8cb05ecf5145c7f5cfa4795e6be812e084f57466#egg=PyGSP
 pyparsing==2.3.1
 pyproj==1.9.6
 pyshp==2.0.1
