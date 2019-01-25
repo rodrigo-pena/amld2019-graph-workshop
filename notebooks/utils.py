@@ -7,12 +7,13 @@ import networkx as nx
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
+###
 
 # For the CH council data
 
 def assign_party_to_names(party_membership_list_path, namelist):
     """ Adds a column containing the party membership of the councillors specified in namelist
-    party_membership_list_path:     Path to a file that contains a list with names and parties
+    party_membership_list_path:     Path to a file that contains a spreadsheet with names and parties
                                     Example: '../data/Ratsmitglieder_1848_FR.csv'
     namelist:                       pd.DataFrame that contains a column of names of councillors
                                     whose party association should be found
@@ -127,7 +128,9 @@ def plot_council_with_party_colors(council_df, x_coords, y_coords,
         ax.get_yaxis().set_ticks([])
         fig.tight_layout()
 
-# For the airport data
+###
+        
+# For the flight routes data
 
 def preprocess_flight_routes():
     routes = pd.read_csv('../data/routes_clean.csv', low_memory=False)
@@ -164,3 +167,5 @@ def display_map(graph, pos, node_color=None):
                      labels=node_labels,
                      pos=pos,
                      node_color=node_color)
+    
+###
