@@ -1,2 +1,3 @@
 libgeos-dev
 libproj-dev
+libspatialindex-c4v5
