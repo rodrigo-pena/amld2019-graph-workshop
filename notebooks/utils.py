@@ -50,6 +50,14 @@ def assign_party_to_names(party_membership_list_path, namelist):
 
 
 def preprocess_swiss_council():
+    """
+    Loads data on the Swiss National Council stored under the `../data` folder
+
+    Returns:
+        pandas.DataFrame -- Name, party affiliation, and color for each council member.
+        numpy.ndarray -- Adjacency matrix for the political similarity graph based on the voting patterns of the Council members. The indices of the matrices correspond tho the respective member indices in the pandas dataframe above.
+    """
+
 
     # Load information from the 50th legislature
     adjacency = np.load('../data/council_adjacency.npy')
@@ -92,11 +100,22 @@ def preprocess_swiss_council():
 
 def plot_council_with_party_colors(council_df, x_coords, y_coords,
                                    custom_colors=None):
-    # Scatter plot of the council members, colored by party affiliation
+    """Scatter plot of the council members listed in a dataframe, according to the passed coordinates and (optional) color vector. If said color vector is not passed, the dots representing the council members are drawn with the colors of their respective parties.
+
+    Arguments:
+        council_df {pandas.DataFrame} -- Name, party affiliation, and color for each council member.
+        x_coords {list, numpy.ndarray} -- Horizontal coordinates of the scatter plot.
+        y_coords {list, numpy.ndarray} -- Vertical coordinates of the scatter plot.
+
+    Keyword Arguments:
+        custom_colors {list, numpy.ndarray} -- A list specifying a color (o position within a colormap) for each member of the council. (default: {None})
+    """
+
     fig = plt.figure(figsize=(9,5))
     ax = fig.add_subplot(111)
 
     if custom_colors is None:
+        # Scatter plot of the council members, colored by party affiliation
         ax.scatter(x_coords, y_coords, c=council_df['Color'], s=50, alpha=0.8)
         ax.set_title('2D Embedding of the Swiss National Council')
         ax.get_xaxis().set_ticks([])
@@ -122,6 +141,7 @@ def plot_council_with_party_colors(council_df, x_coords, y_coords,
         cbar.ax.xaxis.set_label_coords(0.5, -1)
 
     else:
+        # Scatter plot of the council members, custom-colored
         ax.scatter(x_coords, y_coords, c=custom_colors, s=50, alpha=0.8)
         ax.set_title('2D Embedding of the Swiss National Council')
         ax.get_xaxis().set_ticks([])
@@ -129,10 +149,19 @@ def plot_council_with_party_colors(council_df, x_coords, y_coords,
         fig.tight_layout()
 
 ###
-        
+
 # For the flight routes data
 
 def preprocess_flight_routes():
+    """Loads flight route and airport data stored under the `../data folder`.
+
+    Returns:
+        pandas.DataFrame -- Information on each flight route
+        pandas.DataFrame -- Information on each airport
+        dict -- Dictionary relating airport acronyms to respective airport (longitude, latitude) pair.
+        networkx.Graph -- Flight route graph, connecting airports that have at least one flight from one to the other.
+    """
+
     routes = pd.read_csv('../data/routes_clean.csv', low_memory=False)
     airports = pd.read_csv('../data/airports_clean.csv', index_col=0)
 
@@ -145,6 +174,15 @@ def preprocess_flight_routes():
     return routes, airports, pos, G
 
 def display_map(graph, pos, node_color=None):
+    """Plots the flight route graph, overlaid onto a 2d map of the world.
+
+    Arguments:
+        graph {networkx.Graph} -- Flight route graph.
+        pos {dict} -- Dictionary relating airport acronyms to respective airport (longitude, latitude) pair.
+
+    Keyword Arguments:
+        node_color {list} --  A list specifying a color (o position within a colormap) for each airport. (default: {None})
+    """
 
     import cartopy.crs as ccrs
 
@@ -167,5 +205,5 @@ def display_map(graph, pos, node_color=None):
                      labels=node_labels,
                      pos=pos,
                      node_color=node_color)
-    
+
 ###
