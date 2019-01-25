@@ -33,14 +33,14 @@ If you don't know how to install those on your platform, we recommend to install
 1. Download this repository by running `git clone https://github.com/rodrigo-pena/amld2019-graph-workshop`.
 1. Create an environment with `conda create --name amld2019_graph_workshop`.
 1. Activate the environment with `conda activate amld2019_graph_workshop`
-   (or `activate pygsp_tutorial_graphsip`, or `source activate amld2019_graph_workshop`).
+   (or `activate amld2019_graph_workshop`, or `source activate amld2019_graph_workshop`).
 1. Within this environment, install packages by running `conda install -c conda-forge python=3.6 jupyterlab geos proj4 libspatialindex`, then `pip install -r requirements.txt`.
 
 Every time you want to work, do the following:
 
 1. Open a terminal. Windows: open the Anaconda Prompt from the Start menu.
 1. Activate the environment with `conda activate amld2019_graph_workshop`
-   (or `activate pygsp_tutorial_graphsip`, or `source activate amld2019_graph_workshop`).
+   (or `activate amld2019_graph_workshop`, or `source activate amld2019_graph_workshop`).
 1. Start Jupyter with `jupyter lab`.
    The command should open a new tab in your web browser.
 1. Edit and run the notebooks from your browser.
