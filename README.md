@@ -5,11 +5,19 @@ A workshop presented by [Michaël Defferrard](http://deff.ch) and [Rodrigo Pena]
 * Conference page: <https://www.appliedmldays.org/workshops/learning-and-processing-over-networks>
 * Slides: <https://doi.org/10.5281/zenodo.???>
 
+We suggest you follow the [installation guide](#installation) to setup your own computer.
+If you don't succeed, you can work in the cloud using [binder].
+
 ## Content
 
 Below are links to the executed version of the notebooks contained in this repository:
 
 ## Installation
+
+[![Binder](https://mybinder.org/badge.svg)][binder]
+&nbsp; Click the binder badge to play with the notebooks from your browser without installing anything.
+
+[binder]: https://mybinder.org/v2/gh/rodrigo-pena/amld2019-graph-workshop/master?urlpath=lab
 
 For a local installation, you will need [git], [python >= 3.6][python], [jupyter], and packages from the [python scientific stack][scipy].
 If you don't know how to install those on your platform, we recommend to install [miniconda], a distribution of the [conda] package and environment manager. Please follow the below instructions to install it and create an environment for the course.
