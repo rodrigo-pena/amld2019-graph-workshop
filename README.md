@@ -32,7 +32,15 @@ Participants will learn how to identify network data, how to deal with it, and w
 
 ## Content
 
-Below are links to the executed version of the notebooks contained in this repository:
+This repository contains notebooks for you to practice the presented concepts.
+They are meant to be worked on while following the slides.
+The workshop has been prepared as a sequence of presentations and practical sessions.
+
+The repository is made of three branches.
+The `master` branch contains the notebooks with instructions and questions for you to follow and answer.
+The `solutions` branch adds solutions.
+The `outputs` branch contains an executed version of the `solutions` notebooks.
+We recommend that you work from the `master` branch, and consult the solutions from the below links.
 
 1. [Graph and network basics][basics]
 1. [Network science: basic network properties][properties]
