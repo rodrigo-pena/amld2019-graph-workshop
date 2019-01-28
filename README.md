@@ -8,6 +8,28 @@ A workshop presented by [Michaël Defferrard](http://deff.ch) and [Rodrigo Pena]
 We suggest you follow the [installation guide](#installation) to setup your own computer.
 If you don't succeed, you can work in the cloud using [binder].
 
+## Description
+
+The workshop will introduce the participants to graphs/networks, and provide pointers on how to deal with information defined on such domains.
+
+Participants will be able to see two kinds of graphs: (i) those that are discrete representations of continuous domains, and (ii) those that model relations between entities.
+Examples of data supported on the networks of the first category are temperature/rain/snow measurements over the Earth, or wind drag over a 3D wing model, or yet category labels (e.g., "land", "buildings", "cars", "people") over a 3D point cloud acquired for autonomous vehicles, land surveys, or indoor mapping.
+The graphs of the second category include social networks (representing relations between people, and including data about them), the internet (seen through hyperlinks between websites), telecommunication networks (e.g., examining the number of packets per second traveling via the fibers connecting routers), interaction networks (user-product, product-patent, user-user, etc.), road systems, energy networks, and even molecules.
+
+Indeed, networks are ubiquitous in the real world, and, today, data is plenty. In an abstract framework, once the graph and data are defined, the same analysis tools can be used to comprehend that information across various applications. This framework and its tools are the ones we will work with during this workshop. The proposed processing pipeline is versatile and can be fitted to all the examples above, and many more.
+
+The key topics orbiting the theme of this workshop are Network Science, Spectral Graph Theory, Graph Signal Processing, and Machine Learning. After getting acquainted with the basics, participants will choose an application on which to work from a list based on some of the applications mentioned in the previous paragraphs.
+
+**Outcome**
+
+Participants will learn how to identify network data, how to deal with it, and what can be learned from it. They will know the basics of information processing over networks, and how to devise a machine learning system based on network data. Finally, the hands-on experience will give them the confidence to apply those tools in practice, in applications of their choice.
+
+**Prerequisites**
+
+* python programming
+* basic linear algebra
+* no prior knowledge about networks is necessary
+
 ## Content
 
 Below are links to the executed version of the notebooks contained in this repository:
