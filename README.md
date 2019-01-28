@@ -18,7 +18,7 @@ Below are links to the executed version of the notebooks contained in this repos
 1. [Spectral representation and filtering][filters]
 
 [basics]: https://nbviewer.jupyter.org/github/rodrigo-pena/amld2019-graph-workshop/blob/outputs/notebooks/01_basics.ipynb
-[properties]: https://nbviewer.jupyter.org/github/rodrigo-pena/amld2019-graph-workshop/blob/master/notebooks/02_properties.ipynb
+[properties]: https://nbviewer.jupyter.org/github/rodrigo-pena/amld2019-graph-workshop/blob/outputs/notebooks/02_properties.ipynb
 [spectral]: https://nbviewer.jupyter.org/github/rodrigo-pena/amld2019-graph-workshop/blob/outputs/notebooks/03_spectral.ipynb
 [filters]: https://nbviewer.jupyter.org/github/rodrigo-pena/amld2019-graph-workshop/blob/outputs/notebooks/04_filters.ipynb
 
