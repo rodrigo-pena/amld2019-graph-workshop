@@ -55,12 +55,10 @@ Every time you want to work, do the following:
    The command should open a new tab in your web browser.
 1. Edit and run the notebooks from your browser.
 
-Run the `test_install.ipynb` Jupyter notebook to make sure that the main packages can at least be imported. If you notice errors of the type 'There is no package called `osmnx`' or 'There is no package called `cartopy`' it is because there was an issue while installing them from the `requirements.txt` file. A possible solution is to diretly install those packages from the terminal, by running
+Run the `test_install.ipynb` Jupyter notebook to make sure that the main packages can at least be imported.
 
-* `conda install -c conda-forge osmnx`
-* `conda install -c conda-forge cartopy`
-
-in the terminal, from within the `amld2019_graph_workshop` environment.
+If you notice errors of the type 'There is no package called `osmnx`' or 'There is no package called `cartopy`', it is because there was an issue while installing them from the `requirements.txt` file.
+A possible solution is to install those packages with conda, by running `conda install -c conda-forge osmnx cartopy` in the terminal, from within the `amld2019_graph_workshop` environment.
 
 [git]: https://git-scm.com
 [python]: https://www.python.org
