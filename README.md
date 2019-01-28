@@ -12,6 +12,16 @@ If you don't succeed, you can work in the cloud using [binder].
 
 Below are links to the executed version of the notebooks contained in this repository:
 
+1. [Graph and network basics][basics]
+1. [Network science: basic network properties][properties]
+1. [Spectral methods: Laplacian eigenmaps and spectral clustering][spectral]
+1. [Spectral representation and filtering][filters]
+
+[basics]: https://nbviewer.jupyter.org/github/rodrigo-pena/amld2019-graph-workshop/blob/outputs/notebooks/01_basics.ipynb
+[properties]: https://nbviewer.jupyter.org/github/rodrigo-pena/amld2019-graph-workshop/blob/outputs/notebooks/02_properties.ipynb
+[spectral]: https://nbviewer.jupyter.org/github/rodrigo-pena/amld2019-graph-workshop/blob/outputs/notebooks/03_spectral.ipynb
+[filters]: https://nbviewer.jupyter.org/github/rodrigo-pena/amld2019-graph-workshop/blob/outputs/notebooks/04_filters.ipynb
+
 ## Installation
 
 [![Binder](https://mybinder.org/badge.svg)][binder]
