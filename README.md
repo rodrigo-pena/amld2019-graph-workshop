@@ -3,7 +3,7 @@
 A workshop presented by [Michaël Defferrard](http://deff.ch) and [Rodrigo Pena](https://rodrigo-pena.github.io) at the [Applied Machine Learning Days](https://www.appliedmldays.org) in January 2019.
 
 * Conference page: <https://www.appliedmldays.org/workshops/learning-and-processing-over-networks>
-* Slides: <https://doi.org/10.5281/zenodo.???>
+* Slides: <https://doi.org/10.5281/zenodo.2551081>
 
 We suggest you follow the [installation guide](#installation) to setup your own computer.
 If you don't succeed, you can work in the cloud using [binder].
