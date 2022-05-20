@@ -8,6 +8,8 @@ A workshop presented by [Michaël Defferrard](http://deff.ch) and [Rodrigo Pena]
 We suggest you follow the [installation guide](#installation) to setup your own computer.
 If you don't succeed, you can work in the cloud using [binder].
 
+[![DOI](https://zenodo.org/badge/167394811.svg)](https://zenodo.org/badge/latestdoi/167394811)
+
 ## Description
 
 The workshop will introduce the participants to graphs/networks, and provide pointers on how to deal with information defined on such domains.
